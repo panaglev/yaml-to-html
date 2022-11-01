@@ -1,0 +1,66 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas: 
+    "photo baza"
+    "biba aboba";
+    border: solid black;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.container > * {
+    padding: 40px;
+}
+
+.c1 {
+    grid-area: photo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid black 2px;
+}
+
+.c1 img {
+    width: 75%;
+    height: 75%;
+}
+
+.c2 p {
+    text-align: center;
+}
+
+.c2{
+    grid-area: baza;
+    border-bottom: solid black 2px;
+}
+
+.c2 h2 {
+    text-align: right;
+}
+
+.c3{
+    grid-area: biba;
+    border-right: solid black 2px;
+    border-bottom: solid black 2px;
+}
+
+.c4{
+    grid-area: aboba;
+    border-bottom: solid black 2px;
+}
+
+p {
+    font-size: 18px;
+}
+
+li {
+    font-size: 20px;
+}
+
+.c4 > ul > li {
+    display: flex;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="c1">
+            <img src="john_doe.jpg" />
+        </div>
+        <div class="c2">
+            <h2>{{ first_name }} <br> {{ last_name }} <br> {{ occupation }}</h2>
+            <p> {{ contact_email }} </p>
+        </div>
+        <div class="c3">
+            <h2>Образование</h2>
+            <p><b>{{ education }}</b> <br> {{ education_beginning }} - {{ education_end }}</p>
+            <h2>Навыки</h2>
+            <ul>
+                {% for skill in skills %}
+                    <h2>{{ skill.name }}</h2>
+                    {% for label in skill.labels %}
+                        <li>{{ label }}</li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="c4">
+            <h2>Опыт работы</h2>
+            <li>
+                {% for work_exp in work_experience %}
+                <h3>{{ work_exp.date_start }} - {{ work_exp.date_end }}</h3>
+                <div style="margin: 0 0 0 8px;">
+                    <h3>{{ work_exp.company_name }}</h3>
+                    <ul>
+                        {% for responsibility in work_exp.responsibilities %}
+                        <li>{{ responsibility }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </li>
+        </div>
+    </div>
+</body>
+
+</html>
