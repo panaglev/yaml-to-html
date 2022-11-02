@@ -1,0 +1,37 @@
+---
+basic_info:
+  first_name: Ivan
+  last_name: Panaev
+  occupation: Software engineer
+  contact_email: my_email@gmail.com
+  education: Higher(in process)
+  education_beginning: 01.09.2020
+  education_end: 31.06.2025
+skills:
+  - name: Python
+    labels:
+      - programming
+      - backend
+      - venv
+      - sqlalchemy
+      - flask
+  - name: Golang
+    labels:
+      - programming
+      - backend
+      - blockchain
+work_experience:
+  - company_name: FAANG(google)
+    date_start: 01.01.2019
+    date_end: 31.12.2020
+    responsibilities:
+      - Python engineer
+      - Git
+      - SRE
+  - company_name: Pied Piper
+    date_start: 01.01.2022
+    date_end: current time
+    responsibilities:
+      - Python backend
+      - Fridge hacking
+      - Compression
