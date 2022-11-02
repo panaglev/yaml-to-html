@@ -1,0 +1,10 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - cd yaml-to-html/ && python main.py
+
+  docker:
+    cmds:
+      - docker build --tag resume --target builder . && docker build --tag resume:html --target lite .

@@ -20,7 +20,6 @@ with open('resume.yaml') as f:
         for elem in data:
             if elem == "basic_info": 
                 for item in data[elem]:
-                    print(item)
                     if item == "first_name":
                         first_name = data[elem][item]
                     elif item == "last_name":
